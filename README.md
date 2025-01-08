@@ -1,50 +1,98 @@
-# React + TypeScript + Vite
+Flynx.ai Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official repository for the Flynx.ai homepage. Flynx.ai aims to redefine investment banking with AI, offering advanced research and services that democratize investment opportunities for everyone.
 
-Currently, two official plugins are available:
+This project uses React, TypeScript, and Vite to deliver a high-performance and scalable website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key Features
+	•	Mission-Driven Content: Showcases Flynx.ai’s vision to democratize access to investment opportunities and empower users with AI-powered insights.
+	•	AI Integration: Communicates Flynx.ai’s focus on leveraging AI to enhance investment processes, from data analysis to decision-making.
+	•	Modern Frontend Stack: Built with React + TypeScript + Vite for fast development and performance.
 
-## Expanding the ESLint configuration
+Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Core Frameworks & Tools
+	•	React: For building the user interface.
+	•	TypeScript: Ensures type safety and better development experience.
+	•	Vite: A fast build tool optimized for modern web projects.
 
-- Configure the top-level `parserOptions` property like this:
+Plugins
+	•	@vitejs/plugin-react: Uses Babel for Fast Refresh.
+	•	@vitejs/plugin-react-swc: Uses SWC for even faster builds with Fast Refresh.
 
-```js
+Expanding the ESLint Configuration
+
+This project includes basic ESLint rules for development. If you’re building a production application, it’s recommended to enable type-aware lint rules. Here’s how:
+	1.	Update the parserOptions property in your ESLint configuration:
+
 export default tseslint.config({
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
-```
+});
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+	2.	Replace tseslint.configs.recommended with:
+	•	tseslint.configs.recommendedTypeChecked or
+	•	tseslint.configs.strictTypeChecked.
+	3.	Optionally, include stylistic rules:
+
+...tseslint.configs.stylisticTypeChecked
+
+
+	4.	Install eslint-plugin-react and update your configuration:
+
+import react from 'eslint-plugin-react';
 
 export default tseslint.config({
-  // Set the react version
   settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
+  plugins: { react },
   rules: {
-    // other rules...
-    // Enable its recommended rules
     ...react.configs.recommended.rules,
     ...react.configs['jsx-runtime'].rules,
   },
-})
-```
+});
+
+Flynx.ai: Redefining Investment Banking with AI
+
+Why Flynx.ai?
+	•	AI-Powered Insights: Real-time analysis of millions of pages, delivering consistent and reliable investment research.
+	•	Democratized Opportunities: Lowering barriers for smaller investors with advanced technology.
+	•	24/7 Operations: AI-driven services that never sleep or lose focus.
+	•	Specialized Advantage: Focused expertise in GenAI, Crypto, and high-net-worth markets.
+
+Core Features
+	•	AI-Driven Research Platform:
+	•	Automated investment-grade analysis.
+	•	Real-time valuation and pricing models.
+	•	Customized data visualization tools.
+	•	Digital Investment Services:
+	•	End-to-end KYC, contracts, payments, and tracking.
+	•	Automated post-investment reporting and monitoring.
+
+Deployment
+
+This project is hosted on Vercel and automatically deployed from the main branch of the connected GitHub repository. Any new commits to the main branch will trigger a build and deploy.
+
+To deploy locally:
+
+npm install
+npm run dev
+
+For production builds:
+
+npm run build
+npm run preview
+
+Contributing
+
+We welcome contributions to improve Flynx.ai. If you’re interested in contributing, please fork the repository and submit a pull request.
+
+License
+
+This project is licensed under the MIT License.
+
+Feel free to adapt this as needed for your project!
